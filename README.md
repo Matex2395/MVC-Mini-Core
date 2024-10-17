@@ -1,100 +1,43 @@
-# Proyecto ASP.NET MVC: Filtrado por Fechas
+# Filtro Tareas
 
-Este proyecto es un ejemplo de una aplicación ASP.NET MVC que muestra cómo filtrar y calcular datos dentro de un rango de fechas. A continuación se explican los pasos para crear este proyecto desde cero, así como los enlaces de referencia y contacto.
+Este repositorio contiene un proyecto MVC de filtro de tareas por un rango de fechas, dicho proyecto se encuentra desplegado en un enlace web. Aquí encontrarás todo lo necesario para entender el proyecto y ejecutarlo.
 
-## Descripción
+En primer lugar, para este proyecto se utilizaron las tecnologías de ASP.NET & EntityFramework, además de un servicio de hosting llamado SmarterASP.net, el cual sirvió para publicar el proyecto y crear una base de datos.
 
-En este proyecto, se crea una aplicación web que permite gestionar tareas y filtrarlas por un rango de fechas. También se calcula si las tareas están retrasadas y muestra cuántos días de retraso tienen.
+## Requisitos Previos
 
-## Requisitos
+- Visual Studio 2022 o superior
+- SQL Server 2022
+- Microsoft SQL Server Management Studio 20
 
-- Visual Studio 2019 o superior
-- .NET Core 3.1 o superior
-- SQL Server o cualquier base de datos compatible con Entity Framework
+## Instrucciones de Uso
 
-## Instalación
+1. **Clona el Repositorio:** Clona este repositorio utilizando Git:
 
-1. Clona el repositorio en tu máquina local:
-
-    ```sh
-    https://github.com/Guiller438/Mini_Core.git
+    ```bash
+    https://github.com/Matex2395/MVC-Mini-Core.git
     ```
 
-2. Abre el proyecto en Visual Studio.
+    También puedes clonarlo en Visual Studio 2022.
 
-3. Configura la cadena de conexión en `appsettings.json` para tu base de datos:
+2. **Abre el Proyecto en Visual Studio 2022:** Abre Visual Studio 2022 y ejecuta el archivo que contiene la solución del proyecto, con esto podrás acceder a los archivos del proyecto.
 
-    ```json
-    {
-      "ConnectionStrings": {
-        "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=nombre_de_tu_base_de_datos;Trusted_Connection=True;MultipleActiveResultSets=true"
-      },
-      "Logging": {
-        "LogLevel": {
-          "Default": "Information",
-          "Microsoft": "Warning",
-          "Microsoft.Hosting.Lifetime": "Information"
-        }
-      },
-      "AllowedHosts": "*"
-    }
-    ```
+3. **Crea la Base de Datos**
 
-4. Restaura las dependencias y construye el proyecto:
+    - Modifica la cadena de conexión en ```appsettings.json``` para que esta responda a tu base de datos en SQL Server.
+    - Añade las migraciones y actualiza la Base de Datos por medio de la consola del Administrador de Paquetes NuGet.
 
-    ```sh
-    dotnet restore
-    dotnet build
-    ```
+4. **Ejecuta el proyecto:** Pon a correr al proyecto y prueba las funcionalidades de este.
 
-5. Aplica las migraciones para configurar la base de datos:
+## Enlace a Proyecto Desplegado
+Puedes acceder al proyecto por medio del siguiente enlace:
+- http://matex2395-001-site1.ftempurl.com/ 
 
-    ```sh
-    dotnet ef database update
-    ```
+Sin embargo, el sitio web necesita credenciales para poder acceder:
+**Usuario:** 11199777
+**Contraseña:** 60-dayfreetrial
 
-6. Ejecuta la aplicación:
+## Contribuciones
 
-    ```sh
-    dotnet run
-    ```
+¡Siéntete libre de contribuir al proyecto abriendo issues o enviando pull requests!
 
-## Uso
-
-Al iniciar la aplicación, se mostrará la lista de tareas filtradas por un rango de fechas predeterminado. Puedes cambiar el rango de fechas utilizando el formulario de filtrado.
-
-### Filtrado por Fechas
-
-- Selecciona las fechas de inicio y fin en el formulario y presiona "Filtrar" para actualizar la lista de tareas.
-
-### Cálculo de Retrasos
-
-- La aplicación calcula si una tarea está retrasada con respecto a la fecha final seleccionada y muestra los días de retraso.
-
-## Estructura del Proyecto
-
-- **Controllers/TareasController.cs:** Controlador que maneja la lógica del filtrado de tareas.
-- **Models/Tarea.cs:** Modelo que representa una tarea.
-- **Views/Tareas/Index.cshtml:** Vista que muestra la lista de tareas y el formulario de filtrado.
-- **appsettings.json:** Archivo de configuración para la cadena de conexión de la base de datos.
-
-## Referencias
-
-- [Documentación de ASP.NET MVC](https://docs.microsoft.com/en-us/dotnet/framework/)
-- [Repositorio en GitHub](https://github.com/Guiller438/Mini_Core.git)
-- [Enlace del Proyecto deployado](http://guillermo269-001-site1.etempurl.com)
-  
-##Credenciales para acceder al contenido web deployado
-
-- **Uusario:** 11181735 
-- **Contraseña** 60-dayfreetrial
-  
-## Contactos
-
-- **Email Institucional:** guillermo.alvarez@udla.edu.ec
-
-## Video Tutorial
-
-En este video se explica lo básico para crear un proyecto MVC .NET desde cero y adicionalmente se muestra cómo filtrar y calcular datos dentro de un rango de fechas.
-
-- [Video en YouTube](https://youtu.be/bYfy0S_bj4s)
